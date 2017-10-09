@@ -1,0 +1,27 @@
+<?xml version="1.0"?>    
+<!DOCTYPE hibernate-mapping PUBLIC     
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"    
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">       
+<hibernate-mapping>      
+    <class name="com.wd.bean.HourseVO" table="t_hourse">
+			<id name="id" column="id" type="string">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="name" column="t_name" type="string"></property>
+			<property name="logo" column="logo" type="string"></property>
+			<property name="intro" column="intro" type="string"></property>
+			<property name="area" column="area" type="double"></property>
+			<property name="unit_price" column="unit_price" type="double"></property>
+			<property name="created_time" column="created_time" type="date"></property>
+			<property name="status"  column="h_status" type="string"></property>
+			<many-to-one name="buildings" column="buildings_id" class="com.wd.bean.BuildingsVO"></many-to-one>
+			<set name="appointmentSet" inverse="true" cascade="all">
+				<key column="house_id"/>
+				<one-to-many class="com.wd.bean.AppointmentVO"/>
+			</set>
+			<set name="roomSet" inverse="true" cascade="all">
+				<key column="house_id"/>
+				<one-to-many class="com.wd.bean.RoomVO"/>
+			</set>
+		</class>
+</hibernate-mapping>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="xsl2" namespace="/buildings" extends="json-default">
+    	<interceptors>
+    		<interceptor name="adminMethod" class="com.wd.interceptor.adminLoginInterceptor">
+    			<param name="includeMethods">allBuildsListPage,buildsMap,allBuildsList</param>
+    		</interceptor>
+    		<interceptor name="agencyMethod" class="com.wd.interceptor.AgencyLoginInterceptor">
+    			<param name="includeMethods">buildAdd,addBuild,list,agencyBuildsList,update,inOractive,batchUploadImg</param>
+    		</interceptor>
+    		<interceptor-stack name="mystack">
+    			 <interceptor-ref name="defaultStack"></interceptor-ref>
+    			 <interceptor-ref name="adminMethod"></interceptor-ref>
+    			 <interceptor-ref name="agencyMethod"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    	<action name="*" class="BuildingsAction" method="{1}">
+    		<result name="buildAdd">/WEB-INF/xsl/b.jsp</result>
+    		<result name="listPage">/WEB-INF/xsl/buildingsList.jsp</result>
+    		<result name="allBuildsListPage">/WEB-INF/admin/buildingsList.jsp</result>
+    		<result name="buildsListPage">/WEB-INF/views/buildfind.jsp</result>
+    		<result name="buildsMap">/WEB-INF/admin/buildingsMap.jsp</result>
+    		<result name="onebuild">/WEB-INF/views/buildNew.jsp</result>
+    		<result name="history" type="redirect">
+    		onebuild.action?buildingsVO.id=${buildingsVO.id}
+    		</result>
+    		<result name="list" type="json"></result>
+    		<result name="update" type="json"></result>
+    		<result name="test" type="json"></result>
+    		<result name="index">/UsersView/index.jsp</result>
+    		<result name="adminBuildsDetail">/WEB-INF/admin/buildsDetail.jsp</result>
+    		<result name="lookBuildsDetail">/WEB-INF/xsl/lookBuildingsDetails.jsp</result>
+    	</action>
+    </package>
+</struts>

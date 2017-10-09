@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean id="AdminAction" class="com.wd.controller.AdminAction" autowire="byName" 	scope="prototype"></bean>
+	<bean id="AdsAction" class="com.wd.controller.AdsAction" autowire="byName" 	scope="prototype"></bean>
+    <bean id="adminDao" class="com.wd.dao.imp.AdminDaoImp"  autowire="byName"></bean>
+    <bean id="adminService" class="com.wd.service.imp.AdminServiceImp" autowire="byName"></bean>
+	<bean id="articleTypeDao" class="com.wd.dao.imp.ArticleTypeDaoImp" autowire="byName"></bean>
+	<bean id="articleTypeService" class="com.wd.service.imp.ArticleTypeServiceImp" autowire="byName"></bean>
+	<bean id="articleDao" class="com.wd.dao.imp.ArticleDaoImp" autowire="byName"></bean>
+	<bean id="articleService" class="com.wd.service.imp.ArticleServiceImp" autowire="byName"></bean>
+	<bean id="adsDao" class="com.wd.dao.imp.AdsDaoImp"  autowire="byName"></bean>
+    <bean id="adsService" class="com.wd.service.imp.AdsServiceImp" autowire="byName"></bean>
+</beans>

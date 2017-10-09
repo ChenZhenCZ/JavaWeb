@@ -1,0 +1,15 @@
+<?xml version="1.0"?>    
+<!DOCTYPE hibernate-mapping PUBLIC     
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"    
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">       
+<hibernate-mapping>      
+    <class name="com.wd.bean.CommentVO" table="t_comment">
+			<id name="id" column="id" type="string">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="content" column="content" type="string"></property>
+			<property name="comment_time" column="comment_time" type="date"></property>
+			<many-to-one name="user" column="user_id" class="com.wd.bean.UsersVO" ></many-to-one>
+			<many-to-one name="buildings" column="buildings_id" class="com.wd.bean.BuildingsVO" lazy="false"></many-to-one>
+		</class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+/*H-ui选项卡*/
+.clearfix:after{content:"\20";display:block;height:0;clear:both;visibility:hidden}.clearfix{zoom:1}
+.tabBar {}
+.tabBar span {background-color: white;cursor: pointer;display: inline-block;float: left;font-weight: bold;height: 30px;line-height: 30px;padding: 0 15px}
+.tabBar span.current{background-color: white;border-bottom: 2px solid blue}
+.tabCon {display: none}
+/*楼盘相册*/
+a img {border:0}
+ul, ol, li {list-style-type:none;vertical-align:0}
+a {outline-style:none;color:#535353;text-decoration:none}
+a:hover { color: #D40000; text-decoration: none}
+.inkPhoBox { margin: 15px auto 0px; }
+.inkPhoBox .main{}
+.inkPhoBox .mod18{position:relative;}
+.inkPhoBox #prev{ background: url(../images/photo/prevBtn.png) no-repeat; height: 48px; width: 24px; position: absolute; z-index: 99; left: 11px; top: 37px; cursor: pointer; }
+.inkPhoBox #next{ background: url(../images/photo/nextBtn.png) no-repeat; height: 48px; width: 25px; position: absolute; z-index: 99; top: 37px; right: 11px; cursor: pointer; }
+.inkPhoBox .mod18 #prevTop{display:none}
+.inkPhoBox .mod18 #nextTop{display:none}
+.inkPhoBox .mod18 li{float:left;}
+.inkPhoBox .mod18 .cf li{position:relative;color:#fff;}
+.inkPhoBox .mod18 .cf a{display:block;position:absolute;color:#fff;}
+.inkPhoBox .mod18 .cf li span{display:block;width:134px;position:absolute;left:0;bottom:0;padding:10px 20px;line-height:5px;text-align:left;background:rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = "#60000000",endColorstr = "#60000000");}
+.inkPhoBox .bigImgBox{width: 540px; height: 350px; border: 1px solid #E1E1E1; padding:5px; }
+.inkPhoBox .mod18 .picBox{width:530px; height: 350px; position: relative; overflow: hidden;}
+.inkPhoBox .mod18 .picBox ul{height:514px;position:absolute;left:0px;}
+.inkPhoBox .mod18 .picBox li{ width: 530px; height: 320px;left:0px;}
+.inkPhoBox .mod18 .picBox li img{width: 530px; height: 320px;}
+.inkPhoBox .smImgBox{ width: 540px; height: 124px; padding: 11px; border: 1px solid #E1E1E1; margin-top: 12px; position: relative; }
+.inkPhoBox .mod18 .listBox{ width:520px; height: 124px; margin: 0 auto; position: relative; overflow: hidden; }
+.inkPhoBox .mod18 .listBox ul{height:101px;position:absolute; padding-left:0px;}
+.inkPhoBox .mod18 .listBox li{ width: 134px; height: 101px; cursor: pointer; position: relative; padding: 0 9px 0 0; }
+.inkPhoBox .mod18 .listBox li i{display:none;}
+.inkPhoBox .mod18 .listBox li a{display:block;width:134px;height:101px;}
+.inkPhoBox .mod18 .listBox .on img{border:2px solid #B42222; width:130px; height:97px;}
+.inkPhoBox .mod18 .listBox .on { background:url(../images/img_bg.jpg) center top no-repeat;}
+.inkPhoBox .mod18 .listBox .on i{display:block;}
+.inkPhoBox .left_top { font-family:Arial; font-size:32px; color:#fff; text-align:center; height:30px; line-height:30px; background:#333}
+/*楼盘详情*/
+.xxp{font-size:1.5em;font-family:微软雅黑;padding:20px;}/*标题字*/
+.build-1{font-family:微软雅黑; font-size:26px;color:red}
+.build-2{font-family:微软雅黑; font-size:16px;color:red}
+/*H-ui评论列表*/
+.commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
+.commentList .avatar{border: 1px solid transparent;float: left}
+.comment-main{position:relative;margin-left:64px;border:1px solid #dedede;border-radius:2px}
+.comment-main:before,.comment-main:after{position:absolute;top:11px;left:-16px;right:100%;width:0;height:0;display:block;content:" ";border-color:transparent;border-style:solid solid outset;pointer-events:none}
+.comment-main:before{border-right-color:#dedede;border-width:8px}
+.comment-main:after{border-width:7px;border-right-color:#f8f8f8;margin-top:1px;margin-left:2px}
+.comment-header{padding:10px 15px;background:#f8f8f8;border-bottom:1px solid #eee}
+.comment-title{margin:0 0 8px 0;font-size:1.6rem;line-height:1.2}
+.comment-meta{font-size:13px;color:#999;line-height:1.2}
+.comment-meta a{color:#999}
+.comment-author{font-weight:700;color:#999}
+.comment-body{padding:10px;overflow:hidden}
+.comment-body>:last-child{margin-bottom:0}
+.commentList .comment-flip .avatar {float: right}
+.comment-flip .comment-main{margin-left: 0; margin-right: 64px}
+.comment-flip .comment-main:before {border-left-color: #dedede;border-right-color: transparent}
+.comment-flip .comment-main:before, .comment-flip .comment-main:after {left: 100%;position: absolute;right: -16px}
+.comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}

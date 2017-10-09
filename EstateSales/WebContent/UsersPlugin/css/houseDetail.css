@@ -1,0 +1,66 @@
+
+body{
+	  margin-left:0 auto;
+	  margin-right:0 auto;
+	  position:relative;
+	  width:auto;        
+	  font-family:"微软雅黑";
+	  font-weight:bold;    
+	  font-size:15px;   
+	  color:#5f5f5f;       
+	  line-height:35px;        
+	  text-transform:uppercase;
+}
+ul li {
+	list-style:none;
+	font-size:20px;
+	font-weight:none;
+	margin-top:10px;
+}
+
+a:link,a:visited {
+	text-decoration:none;
+	color:blue;
+}
+
+a:active {
+	text-decoration:none;
+	color:green;
+}
+
+a:hover {
+	text-decoration:none;
+	color:blue;
+}
+
+.clear {
+	clear:both;
+}
+.h1{
+	font-weight:bold;
+	color:red;
+}
+.h2{
+	color:red;
+}
+.hr1{
+	border:1px solid #DCDCDC;
+	box-shadow: 1px 1px 2px #808080;
+	margin-top:30px;
+}
+.hr2{
+	border:1px solid red;
+	box-shadow: 1px 1px 2px #C71585;
+	margin-top:0px;
+	width:100%;
+}
+ul li span{
+	margin-left:22px;
+	font-size:20px;
+}
+.title2{
+	
+}
+#hourselist{
+	margin-top:20px;
+}

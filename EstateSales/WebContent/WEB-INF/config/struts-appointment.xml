@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="appointmentPackage" namespace="/appointment" extends="json-default">
+    	<interceptors>
+    		<interceptor name="adminMethod" class="com.wd.interceptor.adminLoginInterceptor">
+    			<param name="includeMethods">appointmentList,adminAppointmentPage</param>
+    		</interceptor>
+    		<interceptor name="agencyMethod" class="com.wd.interceptor.AgencyLoginInterceptor">
+    			<param name="includeMethods">agencyList,agencyAppointmentPage</param>
+    		</interceptor>
+    		<interceptor name="empMethod" class="com.wd.interceptor.employInterceptor">
+    			<param name="includeMethods">employeeList,saleAdd,init</param>
+    		</interceptor>
+    		<interceptor name="userMethod" class="com.wd.interceptor.userLoginInterceptor">
+    			<param name="includeMethods">userlist,userslist,update,</param>
+    		</interceptor>
+    		<interceptor-stack name="mystack">
+    			 <interceptor-ref name="defaultStack"></interceptor-ref>
+    			 <interceptor-ref name="adminMethod"></interceptor-ref>
+    			 <interceptor-ref name="agencyMethod"></interceptor-ref>
+    			 <interceptor-ref name="userMethod"></interceptor-ref>
+    			 <interceptor-ref name="empMethod"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    	<action name="*" class="AppointmentAction" method="{1}">
+    			<interceptor-ref name="mystack"></interceptor-ref>
+    			<result name="saveOrUpdate">/UsersView/housedetail.jsp</result>
+    			<result name="housedetail" type="redirect">../house/oneHourse</result>
+    			<result name="init">/WEB-INF/cz/listapp.jsp</result>
+    			<result name="appointemenEiht">/WEB-INF/cz/eigeceartsList.jsp</result>
+    			<result name="list" type="json"></result>
+    			<!-- 用户预约记录 -->
+    			<result name="userlistPage">/WEB-INF/user/appointmentList.jsp</result>
+    			<result name="userlist" type="json"></result>
+    			<result name="update" type="json"></result>
+    		
+    			<!-- 经销商查看预约 -->
+    			<result name="initAgencyAppoint">/WEB-INF/xsl/agencyLookAppoint.jsp</result>
+    			<result name="agencyAppoint" type="json"></result>
+    	</action>
+    </package>
+
+</struts>

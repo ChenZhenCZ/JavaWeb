@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 客户 -->
+    <package name="cousPackage" namespace="/cous" extends="json-default">
+    	<action name="*" class="CousAction" method="{1}">
+    		<result name="sava">/WEB-INF/cz/listCous.jsp</result>
+    		<result name="init">/WEB-INF/cz/savaCous.jsp</result>
+    		<result name="success">/WEB-INF/cz/listCous.jsp</result>
+    		<result name="agency">/WEB-INF/xsl/customerList.jsp</result>
+    		<result name="list" type="json"></result>
+    	</action>
+    	
+    </package>
+	<!-- 员工 -->
+	<package name="staffPackage" namespace="/staff" extends="json-default">
+		<interceptors>
+    		<interceptor name="loginemp" class="com.wd.interceptor.employInterceptor">
+    			<param name="excludeMethods">exit,loginPage,emplogin,employee,employeetemd,agencyList,list,agencyhighchra,</param>
+    		</interceptor>
+    		<interceptor-stack name="mystack">
+    			 <interceptor-ref name="defaultStack"></interceptor-ref>
+    			 <interceptor-ref name="loginemp"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    	<action name="*" class="StaffAction" method="{1}">
+    		<interceptor-ref name="mystack"></interceptor-ref>
+    		<result name="loginPage">/empLogin.jsp</result>
+    		<result>/WEB-INF/cz/staffindex.jsp</result>
+    		<result name="login">/empLogin.jsp</result>
+    		<result name="load" type="json">/WEB-INF/cz/staffindex.jsp</result>
+    		<result name="init">/WEB-INF/cz/listStaff.jsp</result>
+    		<result name="building">/WEB-INF/cz/empbuilding.jsp</result>
+    		<result name="employee">/WEB-INF/xsl/employeeList.jsp</result>
+    		<result name="map">/WEB-INF/cz/buildingsMap.jsp</result>
+    		<result name="highchra">/WEB-INF/cz/highchartsList.jsp</result>
+    		<result name="agencyhighchra">/WEB-INF/xsl/higchartsList.jsp</result>
+    		<result name="list" type="json"></result>
+    		<result name="errors">/WEB-INF/user/404.jsp</result>
+    	</action>
+    </package>
+	
+	<!-- 销售-->
+	<package name="salePackage" namespace="/sale" extends="json-default">
+    	<action name="*" class="SaleAction" method="{1}">
+    		<result>/WEB-INF/cz/staffindex.jsp</result>
+    		<result name="success">/WEB-INF/cz/staffindex.jsp</result>
+       		<result name="init">/WEB-INF/cz/listSale.jsp</result>
+    		<result name="xiangqing">/WEB-INF/cz/xiangqing.jsp</result>
+    		<result name="performant">/WEB-INF/cz/performanceList.jsp</result>
+    		<result name="agencyList">/WEB-INF/xsl/saleList.jsp</result>
+    		<result name="list" type="json"></result>
+    	</action>
+    </package>
+	<package name="" namespace="/salary" extends="json-default">
+		<action name="*" class="SalaryAction" method="{1}">
+			<result name="list" type="json"></result>
+			<result name="initAgencyEmpSalaryList">/WEB-INF/xsl/agencyLookEmpSalary.jsp</result>
+			<result name="agencyEmpSalaryList" type="json"></result>
+		</action>
+	</package>
+</struts>

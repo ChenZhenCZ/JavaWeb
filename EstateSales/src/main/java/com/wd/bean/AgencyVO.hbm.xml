@@ -1,0 +1,30 @@
+<?xml version="1.0"?>    
+<!DOCTYPE hibernate-mapping PUBLIC     
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"    
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">       
+<hibernate-mapping>      
+    <class name="com.wd.bean.AgencyVO" table="t_agency">
+			<id name="id" column="id" type="string">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="name" column="t_name" type="string"></property>
+			<property name="email" column="email" type="string"></property>
+			<property name="pwd" column="pwd" type="string"></property>
+			<property name="leader" column="leader" type="string"></property>
+			<property name="phone" column="phone" type="string"></property>
+			<property name="tel" column="tel" type="string"></property>
+			<property name="address" column="address" type="string"></property>
+			<property name="logo" column="logo" type="string"></property>
+			<property name="intro" column="intro" type="string"></property>
+			<property name="status" column="a_status" type="string"></property>
+			<property name="created_time"  column="created_time" type="date"></property>
+			<set name="empSet" inverse="true" cascade="all">
+				<key column="agency_id"/>
+				<one-to-many class="com.wd.bean.EmployeeVO"/>
+			</set>
+			<set name="buildingsSet" inverse="true" cascade="all">
+				<key column="agency_id"/>
+				<one-to-many class="com.wd.bean.BuildingsVO"/>
+			</set>
+		</class>
+</hibernate-mapping>

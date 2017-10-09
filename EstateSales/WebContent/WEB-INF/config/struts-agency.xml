@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="xsl" namespace="/agency" extends="json-default">
+    	<interceptors>
+    		<interceptor name="loginMethod" class="com.wd.interceptor.adminLoginInterceptor">
+    			<param name="includeMethods">agencyListPage,updateStatus,list</param>
+    		</interceptor>
+    		<interceptor name="agencyMethod" class="com.wd.interceptor.AgencyLoginInterceptor">
+    			<param name="includeMethods">modifyPwd,modifySuccess,lookAndModifyImg,modifyImg,uploadLogo,main</param>
+    		</interceptor>
+    		<interceptor-stack name="mystack">
+    			 <interceptor-ref name="defaultStack"></interceptor-ref>
+    			 <interceptor-ref name="loginMethod"></interceptor-ref>
+    			  <interceptor-ref name="agencyMethod"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    	<action name="*" class="AgencyAction" method="{1}">
+    		<interceptor-ref name="mystack"></interceptor-ref>
+    		<result name="save">/WEB-INF/agency/agencyLogin.jsp</result>
+    		<result name="login">/agency/agencyLogin.jsp</result>
+    		<result name="phone" type="json"></result>
+    		<result name="list" type="json"></result>
+    		<result name="listPage">/WEB-INF/admin/agencyList.jsp</result>
+    		<result name="agencyMain">/WEB-INF/xsl/buildingsList.jsp</result>
+    		<result name="modifyPwdSuccess" >/agency/forgetPwd.jsp</result>
+    		<result name="modifyPwd">/WEB-INF/xsl/modifyPwd.jsp</result>
+    		
+    		<result name="modifyInfo" >/WEB-INF/xsl/modifyInfo.jsp</result>
+    		<result name="lookInfo" >/WEB-INF/xsl/lookInfo.jsp</result>
+    		<result name="map">/WEB-INF/xsl/buildingsMap.jsp</result>
+    		<result name="load"  type="json">/WEB-INF/xsl/agencyMain.jsp</result>
+    		<result name="main">/WEB-INF/xsl/agencyMain.jsp</result>  <!--页面中点击首页-->
+    		<result name="mainPage">/index.jsp</result>
+    		<result name="errors">/WEB-INF/user/404.jsp</result>
+    	</action>
+    </package>
+</struts>

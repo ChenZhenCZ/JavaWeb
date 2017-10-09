@@ -1,0 +1,30 @@
+<?xml version="1.0"?>    
+<!DOCTYPE hibernate-mapping PUBLIC     
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"    
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">       
+<hibernate-mapping>      
+    <class name="com.wd.bean.CustomerVO" table="t_customer">
+			<id name="id" column="id" type="string">
+				<generator class="assigned"></generator>
+			</id>
+			<property name="name" column="t_name" type="string"></property>
+			<property name="gender" column="gender" type="string"></property>
+			<property name="birthday" column="birthday" type="date"></property>
+			<property name="identity_id" column="identity_id" type="string"></property>
+			<property name="headicon" column="headicon" type="string"></property>
+			<property name="email" column="email" type="string"></property>
+			<property name="phone" column="phone" type="string"></property>
+			<property name="address" column="address" type="string"></property>
+			<property name="customer_type" column="customer_type" type="string"></property>
+			<property name="together" column="together" type="string"></property>
+			<property name="contract" column="contract" type="string"></property>
+			<property name="archives" column="archives" type="string"></property>
+			<property name="created_time"  column="created_time" type="date"></property>
+			<property name="status" column="c_status" type="string"></property>
+			<many-to-one name="emp" class="com.wd.bean.EmployeeVO" column="emp_id" lazy="false"></many-to-one>
+			<set name="saleSet" inverse="true" cascade="all">
+				<key column="customer_id"/>
+				<one-to-many class="com.wd.bean.SaleVO"/>
+			</set>
+		</class>
+</hibernate-mapping>

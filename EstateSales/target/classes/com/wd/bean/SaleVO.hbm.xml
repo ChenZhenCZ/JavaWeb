@@ -1,0 +1,20 @@
+<?xml version="1.0"?>    
+<!DOCTYPE hibernate-mapping PUBLIC     
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"    
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">       
+<hibernate-mapping>      
+    <class name="com.wd.bean.SaleVO" table="t_sale">
+			<id name="id" column="id" type="string">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="sale_time" column="sale_time" type="date"></property>
+			<property name="unit_price" column="unit_price" type="double"></property>
+			<property name="discount" column="discount" type="double"></property>
+			<property name="total_cost" column="total_cost" type="double"></property>
+			<property name="created_time" column="created_time" type="date"></property>
+			<property name="status" column="status" type="string"></property>
+			<many-to-one name="emp" column="emp_id" class="com.wd.bean.EmployeeVO"></many-to-one>
+			<many-to-one name="room" column="room_id" class="com.wd.bean.RoomVO"></many-to-one>
+			<many-to-one name="customer" column="customer_id" class="com.wd.bean.CustomerVO"></many-to-one>
+		</class>
+</hibernate-mapping>

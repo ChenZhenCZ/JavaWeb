@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="xsl6" namespace="/room" extends="json-default">
+    	<action name="*" class="RoomAction" method="{1}">
+    		<result name="test">/index.jsp</result>
+    		<result name="addRoom">/WEB-INF/xsl/roomAdd.jsp</result>
+    		<result name="room" type="json"></result>
+    		
+    		<result name="lookRoomsPage">/WEB-INF/xsl/roomList.jsp</result>
+    		<result name="emplookRoomsPage">/WEB-INF/cz/empRoomList.jsp</result>
+    		<result name="roomslist" type="json"></result>
+    	</action>
+    </package>
+</struts>

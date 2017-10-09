@@ -1,0 +1,15 @@
+<?xml version="1.0"?>    
+<!DOCTYPE hibernate-mapping PUBLIC     
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"    
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">       
+<hibernate-mapping>      
+    <class name="com.wd.bean.RoomVO" table="t_room">
+			<id name="id" column="id" type="string">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="name" column="t_name" type="string"></property>
+			<property name="sale_status" column="sale_status" type="string"></property>
+			<many-to-one name="hourse" column="house_id" class="com.wd.bean.HourseVO"></many-to-one>
+			<many-to-one name="building" column="building_id" class="com.wd.bean.BuildingVO"></many-to-one>
+		</class>
+</hibernate-mapping>

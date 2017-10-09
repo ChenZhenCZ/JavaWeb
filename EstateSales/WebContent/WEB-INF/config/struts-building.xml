@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="xsl4" namespace="/building" extends="json-default">
+    	<interceptors>
+    		<interceptor name="agencyMethod" class="com.wd.interceptor.AgencyLoginInterceptor">
+    			<param name="includeMethods">addBuilding,save,buildingPage,buildingList,inOractive,update</param>
+    		</interceptor>
+    		<interceptor-stack name="mystack">
+    			 <interceptor-ref name="defaultStack"></interceptor-ref>
+    			 <interceptor-ref name="agencyMethod"></interceptor-ref>
+    		</interceptor-stack>
+   		</interceptors>
+    	<action name="*" class="BuildingAction" method="{1}">
+    		<interceptor-ref name="mystack"></interceptor-ref>
+    		<result name="addBuilding">/WEB-INF/xsl/buindingAdd.jsp</result>
+    		<result name="buildingPage">/WEB-INF/xsl/buildingList.jsp</result>
+    		<result name="employeePage">/WEB-INF/cz/bulidingsList.jsp</result>
+    		<result name="listPage" type="json"></result>
+    	</action>
+    </package>
+</struts>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="userPackage" namespace="/user" extends="json-default">
+    	<interceptors>
+    		<interceptor name="loginMethod" class="com.wd.interceptor.userLoginInterceptor">
+    			<param name="includeMethods">home,homePage,changePwdPage,update,changePwd,uploadHeadicon</param>
+    		</interceptor>
+    		<interceptor name="adminMethod" class="com.wd.interceptor.adminLoginInterceptor">
+    			<param name="includeMethods">listPage,userList</param>
+    		</interceptor>
+    		<interceptor-stack name="mystack">
+    			<interceptor-ref name="defaultStack"></interceptor-ref>
+    			<interceptor-ref name="loginMethod"></interceptor-ref>
+    			<interceptor-ref name="adminMethod"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    	<action name="*" class="UserAction" method="{1}">
+    		<interceptor-ref name="mystack"></interceptor-ref>
+    		<result name="phone" type="json"></result>
+    		<result name="login">/EstateSales/index.jsp</result>
+    		<result name="changePwdSuccess">/WEB-INF/user/changePwdSuccess.jsp</result>
+    		<result name="registerSuccess">/WEB-INF/user/registerSuccess.jsp</result>
+    		<result name="forgetPwd" >/WEB-INF/user/forget.jsp</result>
+       		<result name="home">/WEB-INF/user/userIndex.jsp</result>
+    		<result name="changePwd">/WEB-INF/user/changePwd.jsp</result>
+    		<result name="changePwdPage">/WEB-INF/user/changePwd.jsp</result>
+        	<result name="update">/WEB-INF/user/userIndex.jsp</result>
+    		<result name="homePage">/WEB-INF/user/update.jsp</result>
+    		<result name="listPage">/WEB-INF/admin/userList.jsp</result>
+    		<result name="userDetail">/WEB-INF/admin/userDetail.jsp</result>
+    		<result name="exit">/*</result>
+    		<result name="list" type="json"></result>
+    		<result name="load"  type="json"></result>
+    		<result name="index">/index.jsp</result>
+    		<result name="errors">/WEB-INF/user/404.jsp</result>
+    		<result name="appointment"  type="redirect">../house/oneHourse</result>
+    	</action>
+    </package>
+
+</struts>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="adminPackage" namespace="/admin" extends="json-default">
+    	<interceptors>
+    		<interceptor name="loginMethod" class="com.wd.interceptor.adminLoginInterceptor">
+    			<param name="excludeMethods">allArticleList,loginPage,login,exit,allactivityList</param>
+    		</interceptor>
+    		<interceptor-stack name="mystack">
+    			 <interceptor-ref name="defaultStack"></interceptor-ref>
+    			 <interceptor-ref name="loginMethod"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    	<action name="*" class="AdminAction" method="{1}">
+    		<interceptor-ref name="mystack"></interceptor-ref>
+    		<result name="loginPage">/adminLogin.jsp</result>
+    		<result>/WEB-INF/admin/adminIndex.jsp</result>
+    		<result name="article">/WEB-INF/admin/article.jsp</result>
+    		<result name="articleType">/WEB-INF/admin/articleType.jsp</result>
+    		<result name="listPage">/WEB-INF/admin/articleTypeList.jsp</result>
+    		<result name="list" type="json"></result>
+    		<result name="update">/articleTypeList2.jsp</result>
+    		<result name="articleList">/WEB-INF/admin/articleList.jsp</result>
+    		<result name="addPage">/WEB-INF/admin/adsAdd.jsp</result>
+    		<result name="errors">/WEB-INF/user/404.jsp</result>
+    		
+    		<result name="allArticleList">/UsersView/articleList.jsp</result>
+    		<result name="allactivityList">/UsersView/activityList.jsp</result>
+    		
+    		<result name="sendMsgPage">/WEB-INF/admin/sendMsg.jsp</result>
+    		<result name='msg' type="json"></result>
+    	</action>
+    </package>
+</struts>

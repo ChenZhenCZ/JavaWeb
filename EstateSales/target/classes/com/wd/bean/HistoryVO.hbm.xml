@@ -1,0 +1,14 @@
+<?xml version="1.0"?>    
+<!DOCTYPE hibernate-mapping PUBLIC     
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"    
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">       
+<hibernate-mapping>      
+    <class name="com.wd.bean.HistoryVO" table="t_history">
+			<id name="id" column="id" type="string">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="created_time" column="created_time" type="date"></property>
+			<many-to-one name="buildings"  class="com.wd.bean.BuildingsVO" column="buildings_id"></many-to-one>
+			<many-to-one name="user" class="com.wd.bean.UsersVO" column="user_id"></many-to-one>
+		</class>
+</hibernate-mapping>

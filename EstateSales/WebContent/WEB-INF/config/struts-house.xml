@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="xsl5" namespace="/house" extends="json-default">
+    	<action name="*" class="HouseAction" method="{1}">
+    		<result name="addHosue">/WEB-INF/xsl/houseAdd.jsp</result>
+    		<result name="houseList">/WEB-INF/xsl/houseList.jsp</result>
+    		<result name="houseDetil">/UsersView/houselist.jsp</result>
+    		<result name="allHouseList">/UsersView/housedetail.jsp</result>
+    		<result name="initHouseList" type="json"></result>
+    		<result name="agencyHouseDetail">/WEB-INF/xsl/agencyLookHouseDetail.jsp</result>
+    		<result name="calc">/LoanCalc/index.jsp</result>
+    	</action>
+    </package>
+</struts>

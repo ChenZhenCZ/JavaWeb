@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+   	<!-- 客户 -->
+    <bean id="cousDao" class="com.wd.dao.imp.CousDaoImp"  autowire="byName"></bean>
+    <bean id="cousService" class="com.wd.service.imp.CousServiceImp" autowire="byName"></bean>
+	<bean id="CousAction" class="com.wd.controller.CousAction" autowire="byName" 	scope="prototype"></bean>
+	<!-- 员工 -->
+	 <bean id="base" class="com.wd.dao.imp.StaffDaoImp"  autowire="byName"></bean>
+    <bean id="staffService" class="com.wd.service.imp.StaffServiceImp" autowire="byName"></bean>
+	<bean id="StaffAction" class="com.wd.controller.StaffAction" autowire="byName" 	scope="prototype"></bean>
+	<!-- 销售记录 -->
+	<bean id="saledao" class="com.wd.dao.imp.SaleDaoImp"  autowire="byName"></bean>
+    <bean id="saleService" class="com.wd.service.imp.SaleServiceImp" autowire="byName"></bean>
+	<bean id="SaleAction" class="com.wd.controller.SaleAction" autowire="byName" 	scope="prototype"></bean>
+	<bean id="salaryDao" class="com.wd.dao.imp.SalaryDaoImp"  autowire="byName"></bean>
+    <bean id="salaryService" class="com.wd.service.imp.SalaryServiceImp" autowire="byName"></bean>
+	<bean id="SalaryAction" class="com.wd.controller.SalaryAction" autowire="byName" 	scope="prototype"></bean>
+</beans>

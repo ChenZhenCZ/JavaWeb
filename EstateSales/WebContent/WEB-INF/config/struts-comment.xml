@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="commentPage" extends="json-default" namespace="/comment">
+		<action name="*" class="CommentAction" method="{1}">
+			<result name="A">/WEB-INF/views/test.jsp</result>
+    		<result name="success" type="json"></result>
+    		<result name="list">/WEB-INF/views/find.jsp</result>
+    		<result name="userlist">/WEB-INF/user/comment.jsp</result>
+    		<result name="listPage" type="json"></result>
+    		<result name="delete" type="json"></result>
+    		<result name="initAgencylookComment">/WEB-INF/xsl/agencyLookComment.jsp</result>
+    		<result name="errors">/WEB-INF/user/404.jsp</result>
+       	</action>
+	</package>
+</struts>

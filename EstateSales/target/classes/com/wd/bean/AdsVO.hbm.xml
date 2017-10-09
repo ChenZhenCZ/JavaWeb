@@ -1,0 +1,19 @@
+<?xml version="1.0"?>    
+<!DOCTYPE hibernate-mapping PUBLIC     
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"    
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">       
+<hibernate-mapping>      
+    <class name="com.wd.bean.AdsVO" table="t_ads">
+			<id name="id" column="id" type="string">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="title" column="title" type="string"></property>
+			<property name="created_time"  column="created_time" type="date"></property>
+			<property name="ad_url" column="ad_url" type="string"></property>
+			<property name="content" column="content" type="string"></property>
+			<property name="logo" column="logo" type="string"></property>
+			<property name="show_status" column="show_status" type="string"></property>
+			<property name="show_order" column="show_order" type="int"></property>
+			<property name="status" column="a_status" type="string"></property>
+		</class>
+</hibernate-mapping>

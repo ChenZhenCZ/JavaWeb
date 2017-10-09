@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="likePackage" namespace="/like" extends="json-default">
+    	<action name="*" class="LikeAction" method="{1}">
+    		<result name="success" type="json"></result>
+    		<result name="buildList">/WEB-INF/views/find.jsp</result>
+    		<result name="list">/WEB-INF/views/buildNew.jsp</result>
+    		<result name="userlist">/WEB-INF/user/likeList.jsp</result>
+    		<result name="userListPage" type="json"></result>
+    		<result name="add" type="json"></result>
+    		<result name="delete" type="json"></result>
+    	</action>
+    </package>
+</struts>

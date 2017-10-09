@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+.clearfix:after{content:"\20";display:block;height:0;clear:both;visibility:hidden}.clearfix{zoom:1}
+/*H-ui评论列表*/
+.commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
+.commentList .avatar{border: 1px solid transparent;float: left}
+.comment-main{position:relative;margin-left:64px;border:1px solid #dedede;border-radius:2px}
+.comment-main:before,.comment-main:after{position:absolute;top:11px;left:-16px;right:100%;width:0;height:0;display:block;content:" ";border-color:transparent;border-style:solid solid outset;pointer-events:none}
+.comment-main:before{border-right-color:#dedede;border-width:8px}
+.comment-main:after{border-width:7px;border-right-color:#f8f8f8;margin-top:1px;margin-left:2px}
+.comment-header{padding:10px 15px;background:#f8f8f8;border-bottom:1px solid #eee}
+.comment-title{margin:0 0 8px 0;font-size:1.6rem;line-height:1.2}
+.comment-meta{font-size:13px;color:#999;line-height:1.2}
+.comment-meta a{color:#999}
+.comment-author{font-weight:700;color:#999}
+.comment-body{padding:10px;overflow:hidden}
+.comment-body>:last-child{margin-bottom:0}
+.commentList .comment-flip .avatar {float: right}
+.comment-flip .comment-main{margin-left: 0; margin-right: 64px}
+.comment-flip .comment-main:before {border-left-color: #dedede;border-right-color: transparent}
+.comment-flip .comment-main:before, .comment-flip .comment-main:after {left: 100%;position: absolute;right: -16px}
+.comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}
+/*搜索页面的提示*/
+.findtishi{font-family:微软雅黑;font-size:20px}
+.findtishi span{color:red}
+.findbykey a{color:#ccc}
+.findbykey a.active{color:red}
+/*房产排行榜*/
+.listmsg li span{padding:0 15px}
+.mylist span{border-bottom:2px solid #6c98e1;font-size:18px;padding:0 15px}
+.mylist span.current{border-bottom:2px solid red}
+/*楼盘详情*/
+.onebuild p{font-family:微软雅黑}
+.onebuild p a{color:#ADADAD}
+.onebuild p a:hover {border: 2px solid #ccc; text-decoration: none}
+/*总tab*/
+.tabBar span {font-family:微软雅黑;cursor:pointer;display: inline-block;float:left;padding:0 5px}
+/*楼盘详情导航*/
+.tabBar b {font-family:微软雅黑;font-size:17px;color:black;cursor:pointer;display: inline-block;float:left;padding:10px 25px}
+.tabBar b.current{border-bottom:4px solid #6c98e1;background:#dedede}
+.tabmoney{font-family:微软雅黑;font-size:17px;color:black;cursor:pointer;display: inline-block;float:left;padding:10px 25px}
+.tabmoney.current{border-bottom:4px solid #6c98e1;background:#dedede}
+.tabCon {display: none}
+/*搜索框变换*/
+.tabfind span{font-size:17px}
+.tabfind span.current{background:#6c98e1;color:white}
+.tabimg span{border:2px outset white}
+/*首页关键字*/
+.tabkey span{display:block;font-family:微软雅黑;padding:5px 15px}
+.tabkey2{font-family:微软雅黑;font-size:44px;color:red;background:none}
+.tabkey3{font-size:17px}
+.tabkey3.current{background:#f0a34a;color:white}
+/*首页第一tab*/
+.tabone span{font-size:17px;padding:10px 15px;background:#dedede;width:33%}
+.tabone span.current{background:white;border-top:3px solid #6c98e1}
+.tabtwo span{font-size:17px;border-bottom:2px solid #6c98e1;width:25%;padding:0 15px}
+.tabtwo span.current{border-bottom:2px solid red}
+.tishi{font-family:微软雅黑;font-size:22px}
+.tishi span{color:red}
+/*标题字*/
+.xxp{font-family:微软雅黑;font-size:20px;padding:20px}
+.xxp2{background:white}
+/*楼盘详情li*/
+.zz {
+  padding: 0;
+  margin: 0 0 0 -3.333333%
+}
+.zz li {
+  width: 45%;
+  margin-left: 3.333333%;
+  list-style: none;
+  float: left;
+  margin-bottom: 10px;
+  color: #333333
+}
+.zz li:last-child {
+  margin-bottom: 0
+}
+.zz li:before {
+  content: "\f058";
+  margin-right: 5px;
+  color: inherit;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+.zz li.disabled {
+  color: #b5b5b5
+}
+.zz li.disabled:before {
+  content: "\f00d";
+  color: #fff;
+  background: #e5e5e5;
+  padding: 2px 3px;
+  border-radius: 50%;
+  font-size: 8px
+}

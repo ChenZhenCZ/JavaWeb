@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="xsl3" namespace="/activity" extends="json-default">
+    	<interceptors>
+    		<interceptor name="adminMethod" class="com.wd.interceptor.adminLoginInterceptor">
+    			<param name="includeMethods">addAdminActivityPage,addAdminActivity,adminActiviList,adminActivityList</param>
+    		</interceptor>
+    		<interceptor name="agencyMethod" class="com.wd.interceptor.AgencyLoginInterceptor">
+    			<param name="includeMethods">activityAdd,addActivitySuccess,list,activityList</param>
+    		</interceptor>
+    		<interceptor-stack name="mystack">
+    			 <interceptor-ref name="defaultStack"></interceptor-ref>
+    			 <interceptor-ref name="adminMethod"></interceptor-ref>
+    			 <interceptor-ref name="agencyMethod"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    	<action name="*" class="ActivityAction" method="{1}">
+    		<interceptor-ref name="mystack"></interceptor-ref>
+    		<result name="activityAdd">/WEB-INF/xsl/activityAdd.jsp</result>
+    		<result name="activityList">/WEB-INF/xsl/activityList.jsp</result>
+    		<result name="addAdminActivityPage">/WEB-INF/admin/activityAdd.jsp</result>
+    		<result name="adminActivityListPage">/WEB-INF/admin/activityList.jsp</result>
+    		<result name="list" type="json"></result>
+    		<result name="update" type="json"></result>
+    		<result name="errors">/WEB-INF/user/404.jsp</result>
+    	</action>
+    </package>
+</struts>

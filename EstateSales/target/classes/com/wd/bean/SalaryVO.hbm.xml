@@ -1,0 +1,16 @@
+<?xml version="1.0"?>    
+<!DOCTYPE hibernate-mapping PUBLIC     
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"    
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">       
+<hibernate-mapping>      
+    <class name="com.wd.bean.SalaryVO" table="t_salary">
+			<id name="id" column="id" type="string">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="sum" column="sum" type="long"></property>
+			<property name="percent" column="percent" type="string"></property>
+			<property name="time" column="time" type="string"></property>
+			<property name="count" column="count" type="int"></property>
+			<many-to-one name="emp" column="emp_id" class="com.wd.bean.EmployeeVO" ></many-to-one>
+		</class>
+</hibernate-mapping>

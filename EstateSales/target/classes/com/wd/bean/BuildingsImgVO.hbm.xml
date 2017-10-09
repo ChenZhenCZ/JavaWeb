@@ -1,0 +1,15 @@
+<?xml version="1.0"?>    
+<!DOCTYPE hibernate-mapping PUBLIC     
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"    
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">       
+<hibernate-mapping>      
+    <class name="com.wd.bean.BuildingsImgVO" table="t_buildings_img">
+			<id name="id" column="id" type="string">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="img_path" column="img_path" type="string"></property>
+			<property name="img_des" column="img_des" type="string"></property>
+			<property name="created_time"  column="created_time" type="date"></property>
+			<many-to-one name="buildings" column="buildings_id" class="com.wd.bean.BuildingsVO"></many-to-one>
+		</class>
+</hibernate-mapping>

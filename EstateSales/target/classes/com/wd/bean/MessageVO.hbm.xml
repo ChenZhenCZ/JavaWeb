@@ -1,0 +1,17 @@
+<?xml version="1.0"?>    
+<!DOCTYPE hibernate-mapping PUBLIC     
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"    
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">       
+<hibernate-mapping>      
+    <class name="com.wd.bean.MessageVO" table="t_message">
+			<id name="id" column="id" type="string">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="content" column="content" type="string"></property>
+			<property name="buildings_id" column="buildings_id" type="string"></property>
+			<property name="reply" column="reply" type="string"></property>
+			<property name="leave_time" column="leave_time" type="date"></property>
+			<property name="reply_time" column="reply_time" type="date"></property>
+			<property name="user_id" column="user_id" type="string"></property>
+		</class>
+</hibernate-mapping>

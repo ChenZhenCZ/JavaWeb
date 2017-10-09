@@ -1,0 +1,70 @@
+<?xml version="1.0"?>    
+<!DOCTYPE hibernate-mapping PUBLIC     
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"    
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">       
+<hibernate-mapping>      
+    <class name="com.wd.bean.BuildingsVO" table="t_buildings">
+			<id name="id" column="id" type="string">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="name" column="t_name" type="string"></property>
+			<property name="area" column="area" type="string"></property>
+			<property name="address" column="address" type="string"></property>
+			<property name="floor_area" column="floor_area" type="double"></property>
+			<property name="building_area" column="building_area" type="double"></property>
+			<property name="house_type" column="house_type" type="string"></property>
+			<property name="building_type" column="building_type" type="string"></property>
+			<property name="longitude" column="longitude" type="double"></property>
+			<property name="latitude" column="latitude" type="double"></property>
+			<property name="avg_price" column="avg_price" type="double"></property>
+			<property name="company" column="company" type="string"></property>
+			<property name="open_date" column="open_date" type="date"></property>
+			<property name="total_rooms" column="total_rooms" type="int"></property>
+			<property name="reception_address" column="reception_address" type="string"></property>
+			<property name="tel" column="tel" type="string"></property>
+			<property name="green_ratio" column="green_ratio" type="double"></property>
+			<property name="plot_ratio" column="plot_ratio" type="double"></property>
+			<property name="property_fee" column="property_fee" type="double"></property>
+			<property name="property_company" column="property_company" type="string"></property>
+			<property name="car_station" column="car_station" type="int"></property>
+			<property name="traffic" column="traffic" type="text"></property>
+			<property name="equipments" column="equipments" type="text"></property>
+			<property name="logo" column="logo" type="string"></property>
+			<property name="intro" column="intro" type="string"></property>
+			<property name="created_time"  column="created_time" type="date"></property>
+			<property name="status" column="b_status" type="string"></property>
+			<many-to-one name="agency" column="agency_id" class="com.wd.bean.AgencyVO" lazy="false"></many-to-one>
+			<set name="activity" cascade="all" inverse="true" lazy="true">
+				<key column="buildings_id"/>
+				<one-to-many class="com.wd.bean.ActivityVO"/>
+			</set>
+			<set name="buildingsImgSet" cascade="all" inverse="true" lazy="true">
+				<key column="buildings_id"/>
+				<one-to-many class="com.wd.bean.BuildingsImgVO"/>
+			</set>
+			<set name="buildingSet" cascade="all" inverse="true" lazy="true">
+				<key column="buildings_id"/>
+				<one-to-many class="com.wd.bean.BuildingVO"/>
+			</set>
+			<set name="commentSet" cascade="all" inverse="true" lazy="true">
+				<key column="buildings_id"/>
+				<one-to-many class="com.wd.bean.CommentVO"/>
+			</set>
+			<set name="historySet" cascade="all" inverse="true" lazy="true">
+				<key column="buildings_id"/>
+				<one-to-many class="com.wd.bean.HistoryVO"/>
+			</set>
+			<set name="likeSet" cascade="all" inverse="true" lazy="true">
+				<key column="buildings_id"/>
+				<one-to-many class="com.wd.bean.LikeVO"/>
+			</set>
+			<set name="houseSet" cascade="all" inverse="true" lazy="true">
+				<key column="buildings_id"/>
+				<one-to-many class="com.wd.bean.HourseVO"/>
+			</set>
+			<set name="empSet" cascade="all" inverse="true" lazy="true">
+				<key column="building_id"/>
+				<one-to-many class="com.wd.bean.EmployeeVO"/>
+			</set>
+		</class>
+</hibernate-mapping>

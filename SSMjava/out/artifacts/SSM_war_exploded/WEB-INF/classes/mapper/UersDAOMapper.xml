@@ -1,0 +1,54 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cz.dao.UersDAO">
+
+<!-- 类似于hibernate里对象映射，字段与属性的映射
+
+用于返回结果时直接把数据库结果封装为JavaBean，不需要显式地说明每一个字段
+类的属性：
+1）如果没有驼峰式，则属性即字段
+2）如果有驼峰式，则把属性变成带有_的字段
+-->
+<resultMap id="uersMap" type="uers">
+    <result property="name" column="phone"></result>
+    <result property="password" column="password"></result>
+    <result property="id" column="id"></result>
+</resultMap>
+
+<!-- id 值与dao接口里的方法名保持一致
+    parameterType可以使用对象方式，些对象是javabean 的别名
+    如果要引用类里的属性或者其他的参数值，#{}来引用
+-->
+<insert id="sava" parameterType="uers">
+    <![CDATA[
+          insert into t_uers(phone, password) values(#{name}, #{password});
+        ]]>
+</insert>
+
+<!-- 一个参数值的情况 -->
+<select id="ById" parameterType="string" resultMap="uersMap">
+    <![CDATA[
+          select * from t_uers where phone= #{name}
+        ]]>
+</select>
+
+    <select id="pageUerdList"  resultMap="uersMap">
+        <![CDATA[
+            select * from t_uers limit #{currentPage},#{pageSize};
+        ]]>
+    </select>
+
+    <select id="pageListUers"  resultMap="uersMap">
+        <![CDATA[
+            select * from t_uers
+        ]]>
+    </select>
+
+    <select id="countUers" parameterType="Integer">
+           <![CDATA[
+            select COUNT(*) from t_uers
+        ]]>
+    </select>
+</mapper>

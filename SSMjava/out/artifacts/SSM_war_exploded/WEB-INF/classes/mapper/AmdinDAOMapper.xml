@@ -1,0 +1,51 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cz.dao.AmdinDAO">
+
+    <!-- 类似于hibernate里对象映射，字段与属性的映射
+
+    用于返回结果时直接把数据库结果封装为JavaBean，不需要显式地说明每一个字段
+    类的属性：
+    1）如果没有驼峰式，则属性即字段
+    2）如果有驼峰式，则把属性变成带有_的字段
+    -->
+    <resultMap id="adminMap" type="amdin">
+
+    </resultMap>
+
+    <!-- id 值与dao接口里的方法名保持一致
+        parameterType可以使用对象方式，些对象是javabean 的别名
+        如果要引用类里的属性或者其他的参数值，#{}来引用
+    -->
+    <insert id="save" parameterType="amdin">
+        <![CDATA[
+          insert into t_amdin(phone, password) values(#{phone}, #{password});
+        ]]>
+    </insert>
+
+    <!-- 一个参数值的情况 -->
+    <select id="getById" parameterType="string" resultMap="adminMap">
+        <![CDATA[
+          select * from t_amdin where phone= #{phone}
+        ]]>
+    </select>
+
+    <update id="update" parameterType="string" >
+        <![CDATA[
+              update t_amdin set password=#{password} where phone=#{phone}
+      ]]>
+    </update>
+    <delete id="removeById" parameterType="string">
+        <![CDATA[
+            delete from t_amdin where phone=#{phone}
+        ]]>
+    </delete>
+    <select id="listByIds"  resultMap="adminMap">
+        <![CDATA[
+          select * from t_amdin where id in
+        ]]>
+        <foreach collection="list" open="("   close=")" separator="," item="amdinId">#{amdinId}</foreach>
+    </select>
+</mapper>

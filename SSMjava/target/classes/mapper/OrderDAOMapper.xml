@@ -1,0 +1,47 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cz.dao.OrderDAO">
+
+
+    <resultMap id="orderMap" type="order">
+        <id property="id" column="id" />
+        <result property="order_time" column="order_time"></result>
+        <!--
+        <association property="user" resultMap="userMap">
+        </association>
+        -->
+        <association property="user" javaType="com.cz.bean.User">
+            <id property="id" column="u_id"></id>
+            <result property="name" column="name"></result>
+        </association>
+            <collection property="orderItem" javaType="java.util.List" ofType="com.cz.bean.OrderItem">
+                <id property="id" column="item_id"></id>
+                <result property="totalCost" column="total_cost"></result>
+                <association property="product" javaType="com.cz.bean.Product">
+                    <id property="id" column="p_id"></id>
+                    <result property="title" column="title"></result>
+                </association>
+            </collection>
+
+    </resultMap>
+
+    <!--
+    <resultMap id="userMap" type="user">
+        <id property="id" column="u_id"></id>
+        <result property="name" column="name"></result>
+    </resultMap>
+    -->
+    <select id="listByUserId" parameterType="int" resultMap="orderMap">
+        <!--
+            select o.*, u.id as u_id, u.name from t_order o
+          join t_user u on o.user_id = u.id
+        -->
+        <![CDATA[
+          select o.*, u.id as u_id, u.name,i.id as item_id, i.total_cost, p.id as p_id,p.title
+          from t_order o, t_user u, t_order_item i, t_product p
+          where o.id = i.order_id and o.user_id = u.id and p.id = i.product_id;
+        ]]>
+    </select>
+</mapper>

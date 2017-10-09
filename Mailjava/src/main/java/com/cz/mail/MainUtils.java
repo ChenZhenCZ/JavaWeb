@@ -1,0 +1,41 @@
+package com.cz.mail;
+
+import java.io.*;
+import java.util.Properties;
+
+public class MainUtils {
+
+    private  static Properties properties;
+
+    public  static  Properties duid(String path){
+        synchronized (MainUtils.class) {
+            if (properties == null) {
+                synchronized (MainUtils.class) {
+                    try {
+                        InputStream inputStream = new FileInputStream(new File(path));// 载入输入流内的内容
+                        properties = new Properties();
+                        properties.load(inputStream);
+                        return properties;
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    public static String getString(String key) {
+        return properties.getProperty(key);
+    }
+
+    public static Integer getInteger(String key) {
+        return Integer.valueOf(properties.getProperty(key));
+    }
+
+    public static Double getDouble(String key) {
+        return Double.valueOf(properties.getProperty(key));
+    }
+}

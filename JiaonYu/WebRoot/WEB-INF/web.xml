@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+	
+	<servlet>
+    <servlet-name>PayRecordServlet</servlet-name>
+    <servlet-class>ServletList.PayRecordServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>PayRecordServlet</servlet-name>
+    <url-pattern>/payRecordServlet</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name> ListServlet</servlet-name>
+    <servlet-class>ServletList.ListServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name> ListServlet</servlet-name>
+    <url-pattern>/listServlet</url-pattern>
+  </servlet-mapping>
+	
+	
+	
+	<servlet>
+    <servlet-name>CashRecordSevlet</servlet-name>
+    <servlet-class>ServletList.CashRecordSevlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CashRecordSevlet</servlet-name>
+    <url-pattern>/cashRecordSevlet</url-pattern>
+  </servlet-mapping>
+	
+	
+	
+	
+  <servlet>
+    <servlet-name>PoprServlet</servlet-name>
+    <servlet-class>ServletList.PoprServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>PoprServlet</servlet-name>
+    <url-pattern>/poprServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Cityservler</servlet-name>
+    <servlet-class>ServletList.Cityservler</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Cityservler</servlet-name>
+    <url-pattern>/cityservler</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CouponRecordServlet</servlet-name>
+    <servlet-class>ServletList.CouponRecordServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CouponRecordServlet</servlet-name>
+    <url-pattern>/couponRecordServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>ManagerServlet</servlet-name>
+    <servlet-class>ServletList.ManagerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ManagerServlet</servlet-name>
+    <url-pattern>/managerServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>SectionServlet</servlet-name>
+    <servlet-class>ServletList.SectionServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SectionServlet</servlet-name>
+    <url-pattern>/sectionServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TeacherGradeservler</servlet-name>
+    <servlet-class>ServletList.TeacherGradeservler</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>TeacherGradeservler</servlet-name>
+    <url-pattern>/teacherGradeservler</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UersServlet</servlet-name>
+    <servlet-class>ServletList.UersServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewMsgServ</servlet-name>
+    <servlet-class>ServletList.NewMsgServ</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CourseServlet</servlet-name>
+    <servlet-class>ServletList.CourseServlet</servlet-class>
+  </servlet>
+  
+  
+	<servlet>
+    <servlet-name>TeacherServlet</servlet-name>
+    <servlet-class>ServletList.TeacherServlet</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Mainservlet</servlet-name>
+    <servlet-class>ServletList.Mainservlet</servlet-class>
+  </servlet>
+  <servlet>
+    
+    <servlet-name>EvalServlet</servlet-name>
+    <servlet-class>ServletList.EvalServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ForumServlet</servlet-name>
+    <servlet-class>ServletList.ForumServlet</servlet-class>
+  </servlet>
+
+
+ 
+	<servlet-mapping>
+  <servlet-name>TeacherServlet</servlet-name>
+    <url-pattern>/teacherServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>UersServlet</servlet-name>
+    <url-pattern>/uersServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewMsgServ</servlet-name>
+    <url-pattern>/newMsgSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CourseServlet</servlet-name>
+    <url-pattern>/courseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Mainservlet</servlet-name>
+    <url-pattern>/mainservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EvalServlet</servlet-name>
+    <url-pattern>/eval</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ForumServlet</servlet-name>
+    <url-pattern>/forumServlet</url-pattern>
+  </servlet-mapping>
+ 
+	
+   <filter>
+		<filter-name>FileterDadt</filter-name>
+		<filter-class>filter.FileterDadt</filter-class>
+		<init-param>
+			<param-name>str</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>FileterDadt</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+</web-app>
+

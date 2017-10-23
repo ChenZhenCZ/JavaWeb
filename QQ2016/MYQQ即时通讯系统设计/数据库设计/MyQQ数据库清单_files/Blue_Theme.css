@@ -1,0 +1,204 @@
+BODY { 
+ BACKGROUND: #FFFFFF; FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; 
+ CLIP: rect(); MARGIN-LEFT: 3mm; MARGIN-RIGHT: 3mm; MARGIN-TOP: 3mm; MARGIN-BOTTOM: 3mm; 
+}
+
+.BROWSERBODY { 
+ BACKGROUND: #333366; FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; 
+ CLIP: rect(); MARGIN-LEFT: 3mm; MARGIN-RIGHT: 3mm; MARGIN-TOP: 3mm; MARGIN-BOTTOM: 3mm; 
+}
+
+.HOMEBODY { 
+ BACKGROUND: #FFFFFF; FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; 
+ CLIP: rect(); MARGIN-LEFT: 3mm; MARGIN-RIGHT: 3mm; MARGIN-TOP: 3mm; MARGIN-BOTTOM: 3mm; 
+}
+
+.TEXT { 
+ BACKGROUND: #EEEEEE; COLOR: black; 
+ FONT-FAMILY: Times New Romain, Times, Geneva; FONT-SIZE: 10pt; 
+}
+
+.TITLE { 
+ BACKGROUND: #EEEEEE; COLOR: #333366; 
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 16pt; FONT-WEIGHT: bold; 
+ LINE-HEIGHT: 32px;
+}
+
+TABLE {
+ BACKGROUND: #FFFFFF; COLOR: black; TEXT-ALIGN: left; 
+ BORDER: medium none; PADDING: 0px; 
+ MARGIN: 0px; BORDER-COLLAPSE: collapse; 
+}
+
+TD {
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: normal; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left;
+ BORDER: medium none; PADDING: 2px; 
+ MARGIN: 0px; VERTICAL-ALIGN: top; 
+}
+
+TABLE.Grid {
+ BACKGROUND: #999999; COLOR: #333366; TEXT-ALIGN: left; 
+ WIDTH: 100%; MARGIN: 0px; BORDER-COLLAPSE: collapse; 
+}
+
+TABLE.Grid TD.HEADER {
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: bold; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: center;
+ BACKGROUND: #666699; COLOR: #FFCC66;
+ BORDER: medium none; PADDING: 2px; 
+ VERTICAL-ALIGN: top; 
+}
+
+TABLE.Grid TD {
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: normal; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left;
+ BACKGROUND: #EEEEEE; COLOR: #3333B8;
+ BORDER: medium none; PADDING: 2px; 
+ VERTICAL-ALIGN: top; 
+}
+
+TABLE.Grid TD.TD2 {
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: normal; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left;
+ BACKGROUND: #EEEEFF; COLOR: #3333B8;
+ BORDER: medium none; PADDING: 2px; 
+ VERTICAL-ALIGN: top; 
+}
+
+TABLE.Form {
+ BACKGROUND: #FFFFFF; COLOR: black; TEXT-ALIGN: left; 
+ BORDER: 1px solid #666699;
+ WIDTH: 100%; MARGIN: 0px; BORDER-COLLAPSE: collapse; 
+}
+
+TABLE.Form TD.HEADER {
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: bold; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left;
+ BACKGROUND: #FFCC66; COLOR: #333366;
+ BORDER: medium none; PADDING: 2px; 
+ VERTICAL-ALIGN: middle; 
+}
+
+TABLE.Form TD {
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: normal; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left;
+ BACKGROUND: #EEEEEE; COLOR: #3333B8;
+ BORDER: 1px solid #666699; PADDING: 2px; 
+ VERTICAL-ALIGN: middle; 
+}
+
+TABLE.Text { 
+ BORDER: 1px solid #333366;
+ WIDTH: 100%; MARGIN: 0px; BORDER-COLLAPSE: collapse; 
+}
+
+TABLE.Text TD { 
+ FONT-FAMILY: Times New Romain, Times, Geneva; FONT-SIZE: 10pt; 
+ BACKGROUND: #EEEEEE; COLOR: black;
+ BORDER: medium none; PADDING: 2px; 
+ VERTICAL-ALIGN: top; 
+}
+
+TABLE.Title { 
+ BACKGROUND: #EEEEEE; 
+ BORDER: DOUBLE #333366;
+ WIDTH: 100%;  BORDER-COLLAPSE: collapse; 
+ MARGIN-TOP: 1in;
+ MARGIN-BOTTOM: 3in;
+}
+
+TABLE.Title TD { 
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 16pt; FONT-WEIGHT: bold; 
+ BACKGROUND: #EEEEEE; 
+ BORDER: medium none; PADDING: 2px; 
+}
+
+TABLE.Graphics { 
+ BACKGROUND: #FFFFFF; 
+ BORDER: 1px solid #C0C0E0;
+ MARGIN: 0px; BORDER-COLLAPSE: collapse; 
+}
+
+TABLE.Graphics TD { 
+ BACKGROUND: #FFFFFF; 
+ BORDER-LEFT: medium none; PADDING-LEFT: 2px; 
+}
+
+H1 { 
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 18pt; FONT-WEIGHT: bold; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left; LINE-HEIGHT: 18px; COLOR: #00007F;
+}
+
+H2 { 
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 14pt; FONT-WEIGHT: bold; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left; COLOR: #7F007F;
+}
+
+H3 { 
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 12pt; FONT-WEIGHT: bold; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left; COLOR: #333366;
+}
+
+HR {
+ BORDER: 1px SOLID #333366;
+}
+
+A:LINK { 
+ TEXT-DECORATION: underline; COLOR: #3333B8; 
+}
+
+A:VISITED { 
+ TEXT-DECORATION: underline; COLOR: #3333B8; 
+}
+
+A:HOVER { 
+ TEXT-DECORATION: underline; COLOR: #FFCC66; BACKGROUND: #6666B8; 
+}
+
+.BROWSER { 
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: normal; 
+ TEXT-DECORATION: underline;
+}
+
+A.BROWSER:LINK { 
+ TEXT-DECORATION: none; COLOR: #FFCC66; 
+}
+
+A.BROWSER:VISITED { 
+ TEXT-DECORATION: none; COLOR: #FFCC66; 
+}
+
+A.BROWSER:HOVER { 
+ TEXT-DECORATION: underline; COLOR: #FFCC66; BACKGROUND: #6666B8; 
+}
+
+TABLE.NAVGROUP { 
+ BACKGROUND: #666699; 
+ BORDER-COLLAPSE: collapse; PADDING: 0px; MARGIN: 0px;
+}
+
+TABLE.NAVGROUP TD { 
+ BACKGROUND: #666699; TEXT-ALIGN: center;
+ WIDTH: 80px;  HEIGHT: 20px; 
+ BORDER: thin groove white; PADDING: 1px; 
+}
+
+.NAVBUTTON { 
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: normal; 
+ TEXT-DECORATION: underline; TEXT-ALIGN: center;
+ WIDTH: 80px; PADDING-TOP: 2px; PADDING-BOTTOM: 2px;
+}
+
+A.NAVBUTTON:LINK { 
+ TEXT-DECORATION: none; COLOR: #FFCC66; 
+}
+
+A.NAVBUTTON:VISITED { 
+ TEXT-DECORATION: none; COLOR: #FFCC66; 
+}
+
+A.NAVBUTTON:HOVER { 
+ TEXT-DECORATION: underline; COLOR: #FFCC66; BACKGROUND: #6666B8; 
+}
+

@@ -1,0 +1,203 @@
+BODY { 
+ BACKGROUND: #FFFFFF; FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; 
+ CLIP: rect(); MARGIN-LEFT: 3mm; MARGIN-RIGHT: 3mm; MARGIN-TOP: 3mm; MARGIN-BOTTOM: 3mm; 
+}
+
+.BROWSERBODY { 
+ BACKGROUND: #C0C0F0; FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; 
+ CLIP: rect(); MARGIN-LEFT: 3mm; MARGIN-RIGHT: 3mm; MARGIN-TOP: 3mm; MARGIN-BOTTOM: 3mm; 
+}
+
+.HOMEBODY { 
+ BACKGROUND: #FFFFFF; FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; 
+ CLIP: rect(); MARGIN-LEFT: 3mm; MARGIN-RIGHT: 3mm; MARGIN-TOP: 3mm; MARGIN-BOTTOM: 3mm; 
+}
+
+.TEXT { 
+ BACKGROUND: #E0E0FF; COLOR: black; 
+ FONT-FAMILY: Times New Romain, Times, Geneva; FONT-SIZE: 10pt; 
+}
+
+.TITLE { 
+ BACKGROUND: #E0E0FF; COLOR: blue; 
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 16pt; FONT-WEIGHT: bold; 
+ LINE-HEIGHT: 32px;
+}
+
+TABLE {
+ BACKGROUND: #FFFFFF; COLOR: black; TEXT-ALIGN: left; 
+ BORDER: medium none; PADDING: 0px; 
+ MARGIN: 0px; BORDER-COLLAPSE: collapse; 
+}
+
+TD {
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: normal; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left;
+ BORDER: medium none; PADDING: 2px; 
+ MARGIN: 0px; VERTICAL-ALIGN: top; 
+}
+
+TABLE.Grid {
+ BACKGROUND: #E0E0E0; COLOR: black; TEXT-ALIGN: left; 
+ BORDER: thin ridge white; PADDING: 0px; 
+ WIDTH: 100%; MARGIN: 0px; BORDER-COLLAPSE: collapse; 
+}
+
+TABLE.Grid TD.HEADER {
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: bold; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: center;
+ BACKGROUND: #C0C0E0; COLOR: #00007F;
+ BORDER: thin groove white; PADDING: 2px; 
+ VERTICAL-ALIGN: middle; 
+}
+
+TABLE.Grid TD {
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: normal; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left;
+ BACKGROUND: #E0E0E0; COLOR: black;
+ BORDER: thin ridge white; PADDING: 2px; 
+ VERTICAL-ALIGN: top; 
+}
+
+TABLE.Grid TD.TD2 {
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: normal; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left;
+ BACKGROUND: #EEEEFF; COLOR: black;
+ BORDER: thin ridge white; PADDING: 2px; 
+ VERTICAL-ALIGN: top; 
+}
+
+TABLE.Form {
+ BACKGROUND: #E0E0E0; COLOR: black; TEXT-ALIGN: left; 
+ BORDER: thin ridge white; PADDING: 0px; 
+ WIDTH: 100%; MARGIN: 0px; BORDER-COLLAPSE: collapse; 
+}
+
+TABLE.Form TD.HEADER {
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: bold; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left;
+ BACKGROUND: #C0C0E0; COLOR: #00007F;
+ BORDER: thin groove white; PADDING: 2px; 
+ VERTICAL-ALIGN: middle; 
+}
+
+TABLE.Form TD {
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: normal; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left;
+ BACKGROUND: #E0E0E0; COLOR: black;
+ BORDER: thin ridge white; PADDING: 2px; 
+ VERTICAL-ALIGN: middle; 
+}
+
+TABLE.Text { 
+ BORDER: 1px solid #C0C0E0; PADDING: 0px; 
+ WIDTH: 100%; MARGIN: 0px; BORDER-COLLAPSE: collapse; 
+}
+
+TABLE.Text TD { 
+ FONT-FAMILY: Times New Romain, Times, Geneva; FONT-SIZE: 10pt; 
+ BORDER: medium none; PADDING: 2px; 
+ VERTICAL-ALIGN: top; 
+}
+
+TABLE.Title { 
+ BORDER: double #C0C0E0; PADDING: 0px; 
+ BORDER-COLLAPSE: collapse; 
+ MARGIN-TOP: 1in;
+ MARGIN-BOTTOM: 3in;
+}
+
+TABLE.Title TD { 
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 16pt; FONT-WEIGHT: bold; 
+ BORDER: medium none; PADDING: 2px; 
+}
+
+TABLE.Graphics { 
+ BORDER: 1px solid #C0C0E0; PADDING: 0px; 
+ BACKGROUND: #FFFFFF; 
+ MARGIN: 0px; BORDER-COLLAPSE: collapse; 
+}
+
+TABLE.Graphics TD { 
+ BACKGROUND: #FFFFFF; 
+ BORDER: medium none; PADDING: 2px; 
+}
+
+H1 { 
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 16pt; FONT-WEIGHT: bold; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left; LINE-HEIGHT: 18px; COLOR: #7F0000;
+}
+
+H2 { 
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 14pt; FONT-WEIGHT: bold; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left; COLOR: #00007F;
+}
+
+H3 { 
+ FONT-FAMILY: Arial, Helvetica, Geneva; FONT-SIZE: 12pt; FONT-WEIGHT: bold; FONT-STYLE: none;
+ TEXT-DECORATION: none; TEXT-ALIGN: left; COLOR: #7F007F;
+}
+
+HR {
+ BORDER: 1px SOLID #C0C0E0;
+}
+
+A:LINK { 
+ TEXT-DECORATION: underline; COLOR: #00007F; 
+}
+
+A:VISITED { 
+ TEXT-DECORATION: underline; COLOR: #7F007F; 
+}
+
+A:HOVER { 
+ TEXT-DECORATION: underline; COLOR: #E0C000; BACKGROUND: #4040FF; 
+}
+
+.BROWSER { 
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: normal; 
+ TEXT-DECORATION: underline;
+}
+
+A.BROWSER:LINK { 
+ TEXT-DECORATION: none; COLOR: #00007F; 
+}
+
+A.BROWSER:VISITED { 
+ TEXT-DECORATION: none; COLOR: #7F007F; 
+}
+
+A.BROWSER:HOVER { 
+ TEXT-DECORATION: underline; COLOR: #E0C000; BACKGROUND: #4040FF; 
+}
+
+TABLE.NAVGROUP { 
+ BACKGROUND: #C0C0C0; 
+ BORDER-COLLAPSE: collapse; PADDING: 0px; MARGIN: 0px;
+}
+
+TABLE.NAVGROUP TD { 
+ BACKGROUND: #C0C0C0; TEXT-ALIGN: center;
+ WIDTH: 80px;  HEIGHT: 20px; PADDING: 1px;
+ BORDER: thin groove white; PADDING: 2px; 
+}
+
+.NAVBUTTON { 
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: normal; 
+ TEXT-DECORATION: underline; TEXT-ALIGN: center;
+ WIDTH: 80px; PADDING-TOP: 2px; PADDING-BOTTOM: 2px;
+}
+
+A.NAVBUTTON:LINK { 
+ TEXT-DECORATION: none; COLOR: #00007F; 
+}
+
+A.NAVBUTTON:VISITED { 
+ TEXT-DECORATION: none; COLOR: #7F007F; 
+}
+
+A.NAVBUTTON:HOVER { 
+ TEXT-DECORATION: underline; COLOR: #FFCC00; BACKGROUND: #4040FF; 
+}
+
+

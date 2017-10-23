@@ -1,0 +1,25 @@
+--账号表
+create table Account (
+	QQNum int not null identity(10000,1),  --QQ号
+	trueName varchar(20),--真实名字
+	nickName varchar(20),--昵称
+	password varchar(20),--密码
+	sex varchar(2),--性别
+	age int,--年龄
+	brithday varchar(20),--生日
+	faceImage varchar(20),--头像
+	address varchar(100),--地址
+	email varchar(30),邮箱
+	IP varchar(20),--IP地址
+	port varchar(20),--端口号
+	status varchar(20),--状态
+	primary key(QQNum)
+
+)
+
+--好友表
+create table Friend(
+	myQQNum int, --我的账号
+	friendQQNum int, --好友的账号
+	type varchar(10)  --type可以存放 好友、黑名单、陌生人
+)

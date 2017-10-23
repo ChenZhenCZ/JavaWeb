@@ -1,0 +1,10 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cz.dao.UersDAO">
+        <select id="getByNamePwd" resultType="com.cz.baen.Uers">
+            select id,name,password from t_user where
+            name=#{name} and password=#{pwd}
+        </select>
+</mapper>

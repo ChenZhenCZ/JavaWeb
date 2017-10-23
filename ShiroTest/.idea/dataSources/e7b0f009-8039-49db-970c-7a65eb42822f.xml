@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="shiro@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="shiro">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="d_eayui"/>
+    <schema id="4" parent="1" name="d_hig"/>
+    <schema id="5" parent="1" name="d_sshproj"/>
+    <schema id="6" parent="1" name="d_ssm"/>
+    <schema id="7" parent="1" name="d_str"/>
+    <schema id="8" parent="1" name="estatesales"/>
+    <schema id="9" parent="1" name="information_schema"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="sakila"/>
+    <schema id="13" parent="1" name="ssm"/>
+    <schema id="14" parent="1" name="study"/>
+    <schema id="15" parent="1" name="sys"/>
+    <schema id="16" parent="1" name="world"/>
+    <table id="17" parent="2" name="roles_permissions"/>
+    <table id="18" parent="2" name="t_module"/>
+    <table id="19" parent="2" name="t_permission"/>
+    <table id="20" parent="2" name="t_role"/>
+    <table id="21" parent="2" name="t_role_permission"/>
+    <table id="22" parent="2" name="t_user"/>
+    <table id="23" parent="2" name="t_user_role"/>
+    <table id="24" parent="2" name="user_roles"/>
+    <table id="25" parent="2" name="users"/>
+    <column id="26" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="17" name="role_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="28" parent="17" name="permission">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="29" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="31" parent="18" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="32" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="34" parent="19" name="permission">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="35" parent="19" name="des_zh">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="36" parent="19" name="module_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="37" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="39" parent="20" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="40" parent="20" name="des">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="41" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="42" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="43" parent="21" name="role_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="44" parent="21" name="permission_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="45" parent="21" name="set_time">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="46" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="48" parent="22" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="49" parent="22" name="password">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="50" parent="22" name="gender">
+      <Position>4</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <key id="51" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="53" parent="23" name="user_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="54" parent="23" name="role_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="55" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="56" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="57" parent="24" name="username">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="58" parent="24" name="role_name">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="59" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="60" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="61" parent="25" name="username">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="62" parent="25" name="password">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="63" parent="25" name="password_salt">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="64" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.cz.job" />
+
+    <bean id="helloJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="name" value="helloJobDetail" />
+        <property name="group" value="group1" />
+        <property name="targetObject" ref="hollJob" />
+        <property name="targetMethod" value="run" />
+    </bean>
+
+    <bean id="helloJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+        <property name="name" value="helloJobTrigger" />
+        <property name="group" value="group1" />
+        <property name="jobDetail" ref="helloJobDetail" />
+        <property name="repeatInterval" value="5000" />
+    </bean>
+
+    <bean id="cacheClearJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="name" value="testJob" />
+        <property name="group" value="group1" />
+        <property name="targetObject" ref="test" />
+        <property name="targetMethod" value="run" />
+    </bean>
+
+    <bean id="cacheClearJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="name" value="cacheClearJobTrigger" />
+        <property name="group" value="group1" />
+        <property name="jobDetail" ref="cacheClearJobDetail" />
+        <property name="cronExpression" value="0/10 * * * * ? *" />
+    </bean>
+
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="jobDetails">
+            <list>
+                <ref bean="helloJobDetail" />
+                <ref bean="cacheClearJobDetail" />
+            </list>
+        </property>
+        <property name="triggers">
+            <list>
+                <ref bean="helloJobTrigger" />
+                <ref bean="cacheClearJobTrigger" />
+            </list>
+        </property>
+    </bean>
+
+</beans>

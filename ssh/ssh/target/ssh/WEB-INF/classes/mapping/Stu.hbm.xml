@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.gs.bean.Stu" table="t_stu" schema="d_ssh_case">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="num" column="num"/>
+        <property name="realName" column="real_name"/>
+
+        <one-to-one name="stuDetail" class="com.gs.bean.StuDetail"/>
+
+        <many-to-one name="clazz" class="com.gs.bean.Clazz" column="class_id"/>
+
+        <set name="contractSet" table="t_stu_contract">
+            <key column="stu_id"/>
+            <many-to-many class="com.gs.bean.Contract" column="contract_id" />
+        </set>
+
+    </class>
+</hibernate-mapping>

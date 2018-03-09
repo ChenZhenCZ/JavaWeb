@@ -1,0 +1,40 @@
+1、csv，文本文件，后缀是.csv
+    一般情况下，分割符用英文逗号,
+
+姓名,手机号,公司,住址
+张三,188888888888,**公司,江西赣州
+李四,188888888888,**公司,江西赣州
+
+
+
+2、Java代码读写CSV文档
+    1）Java IO BufferedReader/BufferedWriter
+    2）OpenCSV工具
+
+    OpenCSV去读取CSV文档的过程中，任何一个值都是String类型的
+
+3、OpenCSV读写CSV文件
+    1）读
+        a、读取到字符串数组
+            CsvReader类
+                String[] readNext()方法
+                List<String[]> readAll()方法
+        b、使用注解读取取JavaBean中（推荐此方法）
+            使用@CsvBindByName注解：JavaBean中的属性名与csv文件的列名一致
+            使用@CsvBindByName(column = "")注解：JavaBean中的属性名与csv文件的列名不一致
+            使用@CsvBindByPosition(position = 0)注解：没有列名或不想使用列名的情况，position从0开始
+            List<Contract> contractList1 = new CsvToBeanBuilder(new FileReader("src/main/resources/contract.csv"))
+                            .withType(Contract.class).build().parse();
+        c、不使用注解读取到JavaBean中
+            ColumnPositionMappingStrategy
+                设置目标JavaBean类型
+                设置与JavaBean中属性同名的列名
+            CsvToBean    parse(stratege, FileReader)
+
+    2）写
+        a、从字符串数组写出到csv文件
+            CsvWriter
+                writeNext(String[])
+        b、JavaBean组成的List集合写出到csv文件
+             StatefulBeanToCsv beanToCsv = new StatefulBeanToCsvBuilder(writer1).build();
+             beanToCsv.write(list);

@@ -1,0 +1,19 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cz.dao.UserDAO">
+
+	<select id="getByPhonePwd" resultType="user">
+		<![CDATA[
+			select id, phone from t_user where mail = #{mail} and pwd = #{pwd}
+		]]>
+	</select>
+	<insert id="save"  parameterType="com.cz.bean.User">
+		<![CDATA[
+			insert into t_user(user_name,phone,mail,pwd,user_type) values(#{userName},#{phone},
+			#{mail},#{pwd},#{userType})
+		]]>
+	</insert>
+	 
+</mapper>

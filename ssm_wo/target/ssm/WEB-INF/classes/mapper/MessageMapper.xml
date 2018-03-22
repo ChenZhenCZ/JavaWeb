@@ -1,0 +1,18 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cz.dao.MessageDAO">
+
+
+	<insert id="save"  parameterType="com.cz.bean.Message">
+		<![CDATA[
+			insert into t_message(u_id,img,content) values(
+			#{uId},#{img},#{content}
+			)
+		]]>
+	</insert>
+	 <select id="listPagerCriteria" resultType="com.cz.bean.Message">
+			select * from t_message  limit #{pager.beginIndex},#{pager.pageSize}
+	 </select>
+</mapper>

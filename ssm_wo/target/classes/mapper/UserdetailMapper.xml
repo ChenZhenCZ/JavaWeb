@@ -1,0 +1,46 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cz.dao.UserdetailDAO">
+
+	<select id="getById" resultType="userdetail">
+		<![CDATA[
+			select id,gender,sex,interest,dream,name_name,signature,count_type from t_userdetail where id = #{id}
+		]]>
+	</select>
+	<insert id="save"  parameterType="com.cz.bean.Userdetail">
+		<![CDATA[
+			insert into t_userdetail(id,gender,sex,interest,dream,
+			name_name,signature,count_type)
+			values(#{id},#{gender},#{sex},#{interest},#{dream},#{nameName},#{signature},#{count})
+		]]>
+	</insert>
+	<update id="update" parameterType="com.cz.bean.Userdetail">
+		<![CDATA[
+			update t_userdetail
+		]]>
+		<set>
+			<if test="gender !=null">
+				gender=#{gender},
+			</if>
+			<if test="sex !=null">
+				sex=#{sex},
+			</if>
+			<if test="interest !=null">
+				interest=#{interest},
+			</if>
+		    <if test="dream !=null">
+				dream=#{dream},
+			</if>
+			<if test="nameName !=null">
+				name_name=#{nameName},
+			</if>
+			<if test="signature !=null">
+				signature=#{signature},
+			</if>
+		</set>
+		where id=#{id}
+	</update>
+	 
+</mapper>

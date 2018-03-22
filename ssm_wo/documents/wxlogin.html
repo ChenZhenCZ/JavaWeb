@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a id="login_container">微信扫码登录</a>
+	</body>
+	<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+	<script>
+		var obj = new WxLogin({
+		 id:"login_container", 
+		 appid: "wx44552d6afd0f1ee7", 
+		 scope: "snsapi_login", 
+		 redirect_uri:"http://chenzhenwe.xin/index.html",
+		 state: "wxaccount",
+		 style: "black",
+		 href: ""
+		 });
+	</script>
+</html>
